@@ -101,6 +101,10 @@ gotchi_sales = gotchi_sales.rename(columns={"id": "Listing", "buyer": "Buyer", "
        'gotchi.kinship': 'Kinship', 'gotchi.modifiedRarityScore': 'MRS', 'gotchi.name': 'Name',
        'gotchi.numericTraits': 'Traits List', 'gotchi.stakedAmount': 'Staked Amount', })
 
+# Value
+gotchi_sales['Value'] = gotchi_sales['BRS'] / gotchi_sales['Price (GHST)']
+gotchi_sales['Value with items'] = gotchi_sales['MRS'] / gotchi_sales['Price (GHST)']
+
 
 # traits
 
@@ -125,7 +129,7 @@ gotchi_sales = gotchi_sales.drop(columns=['Wearables List'], axis=1)
 
 wearables_data_url = 'https://raw.githubusercontent.com/programmablewealth/aavegotchi-stats/master/src/data/wearables/wearables.json'
 wearables_data = requests.get(wearables_data_url).json()
-wearables_name = {i:wearables_data[str(i)]["0"] for i in wearables_data}
+#wearables_name = {i:wearables_data[str(i)]["0"] for i in wearables_data}
 
 gotchi_sales['Body Item'] = gotchi_sales['Body'].apply(lambda x: '' if x == 0 else wearables_data[str(x)]["0"])
 gotchi_sales['Face Item'] = gotchi_sales['Face'].apply(lambda x: '' if x == 0 else wearables_data[str(x)]["0"])
