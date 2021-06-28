@@ -52,7 +52,7 @@ def json_to_df(json):
 
 
 gotchi_sales = pd.DataFrame()
-for i in range(100):
+for i in range(5):
     skip = i * 1000
     data = json_to_df(run_query(gotchi_sales_query.substitute(skip=skip)))
     if len(data) > 0:
