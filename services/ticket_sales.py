@@ -52,8 +52,8 @@ for i in range(5):
 
 ticket_sales['priceInWei'] = ticket_sales['priceInWei'].astype(float)
 ticket_sales['Price per Ticket (GHST)'] = ticket_sales['priceInWei'] / 1e18
-ticket_sales['Date'] = pd.to_datetime(ticket_sales['timePurchased'], unit='s')
-ticket_sales = ticket_sales.drop(columns=['priceInWei', 'timePurchased'], axis=1)
+ticket_sales['Date'] = pd.to_datetime(ticket_sales['timeLastPurchased'], unit='s')
+ticket_sales = ticket_sales.drop(columns=['priceInWei', 'timeLastPurchased'], axis=1)
 
 replace_values = {
     '0': 'Common',
@@ -68,7 +68,7 @@ ticket_sales['erc1155TypeId'] = ticket_sales['erc1155TypeId'].replace(replace_va
 
 ticket_sales = ticket_sales.rename(columns={"listingID": "Listing", "buyer": "Buyer", "seller": "Seller",
 "quantity": "Quantity", "erc1155TypeId": "Type", })
-
+ticket_sales['Quantity'] = ticket_sales['Quantity'].apply(pd.to_numeric, errors='coerce')
 ticket_sales['Total Purchase (GHST)'] = ticket_sales['Price per Ticket (GHST)'] * ticket_sales['Quantity']
 
 ticket_sales.to_csv(DATA_PATH.joinpath('ticket_sales.csv'))
