@@ -38,6 +38,8 @@ frens_vs_time_by_type = px.line(
     range_y=[0, 0.0025]
 )
 
+frens_vs_time_by_type.update_xaxes(rangeslider_visible=True)
+
 tickets_per_day = px.histogram(
     ticket_sales,
     x='Date',
