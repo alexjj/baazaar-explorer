@@ -10,3 +10,12 @@ gotchi_sales = pd.read_csv(DATA_PATH.joinpath("gotchi_sales.csv"))
 ticket_sales = pd.read_csv(DATA_PATH.joinpath("ticket_sales.csv"))
 wearable_sales = pd.read_csv(DATA_PATH.joinpath("wearable_sales.csv"))
 # Can also add functions and hard coded lists etc. here
+
+frens_per_ticket = {
+    'Common': 50,
+    'Uncommon': 250,
+    'Rare': 500,
+    'Legendary': 2500,
+    'Mythical': 10000,
+    'Godlike': 50000
+}
