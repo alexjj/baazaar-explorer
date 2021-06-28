@@ -123,7 +123,7 @@ gotchi_sales['Right Hand'] = gotchi_sales['Wearables List'].str[5]
 gotchi_sales['Pet'] = gotchi_sales['Wearables List'].str[6]
 gotchi_sales['Background'] = gotchi_sales['Wearables List'].str[7]
 
-gotchi_sales['Naked'] = gotchi_sales['Body'] + gotchi_sales['Face'] + gotchi_sales['Eyes'] + gotchi_sales['Head'] + gotchi_sales['Left Hand'] + gotchi_sales['Right Hand'] + gotchi_sales['Pet'] + gotchi_sales['Background'] == 0
+gotchi_sales['Has Wearables'] = gotchi_sales['Body'] + gotchi_sales['Face'] + gotchi_sales['Eyes'] + gotchi_sales['Head'] + gotchi_sales['Left Hand'] + gotchi_sales['Right Hand'] + gotchi_sales['Pet'] + gotchi_sales['Background'] > 0
 
 gotchi_sales = gotchi_sales.drop(columns=['Wearables List'], axis=1)
 
