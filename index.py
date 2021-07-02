@@ -26,12 +26,7 @@ navbar = dbc.NavbarSimple(
 markdown_text = '''
 ## Welcome to the Baazaar Explorer
 
-This is very much a 🚧work in progress🚧. Mostly getting the basics setup.
-
-Have a look at [gotchis](/gotchis) and [tickets](/tickets) to get an idea.
-
-I've got a few more figures and tables I want to include with the data you can get 
-from [thegraph](https://thegraph.com/explorer/subgraph/aavegotchi/aavegotchi-core-matic). TheGraph does have some limitations which I hadn't realised but will come to those later.
+Visualise and explore the sales and activity on the [Aavegotchi](https://aavegotchi.com) baazaar. Currently covering [gotchi](/gotchis), [wearables](/wearables) and [tickets](/tickets) previously sold on the market. Many more visuals and tables of info planned.  
 
 Feel free to drop me an email hi @ aavagotchi.fyi with any suggestions. Code is on [github](https://github.com/alexjj/baazaar-explorer).
 
