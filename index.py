@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output, State
 
 from app import server 
 from app import app
-from apps import gotchi, tickets
+from apps import gotchi, tickets, wearables
 
 navbar = dbc.NavbarSimple(
     children=[
@@ -56,7 +56,7 @@ def display_page(pathname):
     elif pathname.endswith("/gotchis"):
         return gotchi.layout
     elif pathname.endswith("/wearables"):
-        return "🚧 WIP!"
+        return wearables.layout
     elif pathname.endswith("/tickets"):
         return tickets.layout
     elif pathname.endswith("/stats"):
