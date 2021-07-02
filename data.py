@@ -17,5 +17,6 @@ frens_per_ticket = {
     'Rare': 500,
     'Legendary': 2500,
     'Mythical': 10000,
-    'Godlike': 50000
+    'Godlike': 50000,
+    'Drop': 10000,
 }

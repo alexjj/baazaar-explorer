@@ -13,7 +13,8 @@ pio.templates.default = "plotly_white"
 ticket_sales = data.ticket_sales
 frens_per_ticket = data.frens_per_ticket
 
-ticket_sales['FRENS'] = ticket_sales['Type'].replace(frens_per_ticket, regex=True).astype(float)
+ticket_sales['FRENS'] = ticket_sales['Type'].replace(frens_per_ticket, regex=True)
+ticket_sales['FRENS'] = ticket_sales['FRENS'].astype(float)
 ticket_sales['GHST/FREN'] = ticket_sales['Price per Ticket (GHST)'] / ticket_sales['FRENS']
 
 # Figures
