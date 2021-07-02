@@ -72,7 +72,7 @@ layout = html.Div(
         dbc.Row(
             dbc.Col(children=[
                 html.H2(children="Raffle Ticket Sales"),
-                html.P(children=['Looking back over ', '{:,.0f}'.format(ticket_sales.shape[0]), ' tickets sold.' , ' Totalling ', '{:,.0f}'.format(ticket_sales['Total Purchase (GHST)'].sum()), ' GHST.']),
+                html.P(children=['Looking back over ', '{:,.0f}'.format(ticket_sales.shape[0]), ' ticket transaction.' , ' Totalling ', '{:,.0f}'.format(ticket_sales['Total Purchase (GHST)'].sum()), ' GHST.']),
                 ]
             )
         ),

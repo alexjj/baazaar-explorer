@@ -62,6 +62,7 @@ replace_values = {
     '3': 'Legendary',
     '4': 'Mythical',
     '5': 'Godlike',
+    '6': 'Drop'
 }
 
 ticket_sales['erc1155TypeId'] = ticket_sales['erc1155TypeId'].replace(replace_values, regex=True)
